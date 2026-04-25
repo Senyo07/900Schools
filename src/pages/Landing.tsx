@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,6 +38,14 @@ const Landing = () => {
                                     {item}
                                 </a>
                             ))}
+                            <div className="flex items-center gap-4 ml-4">
+                                <Link to="/auth" className="px-5 py-2.5 rounded-full bg-blue-900/10 hover:bg-blue-900/20 text-gray-900 border border-blue-900/10 transition-all font-medium text-sm flex items-center gap-2">
+                                    Sign In
+                                </Link>
+                                <Link to="/auth" className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-white hover:opacity-90 transition-opacity font-medium text-sm shadow-[0_0_20px_rgba(59,130,246,0.4)] text-blue-950">
+                                    Get Started
+                                </Link>
+                            </div>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -63,6 +72,13 @@ const Landing = () => {
                                         {item}
                                     </a>
                                 ))}
+                                <hr className="border-gray-200" />
+                                <Link to="/auth" className="text-gray-900 hover:text-blue-600 transition-colors text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                                    Sign In
+                                </Link>
+                                <Link to="/auth" className="text-blue-600 hover:text-blue-700 transition-colors text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                                    Get Started
+                                </Link>
                             </div>
                         </div>
                     )}
@@ -94,13 +110,14 @@ const Landing = () => {
                             </p>
 
                             {/* Buttons */}
-                            <div className="flex flex-row items-center justify-center gap-4">
-                                <button className="px-4 py-2 rounded-full bg-gray-300 text-gray-800 font-medium hover:bg-gray-400 transition-colors">
-                                    Discover
-                                </button>
-                                <button className="px-4 py-2 rounded-full text-white bg-[#202A36] hover:bg-[#1a2229] font-medium transition-colors">
-                                    Book Now
-                                </button>
+                            <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                <Link to="/auth" className="px-8 py-4 rounded-full bg-white text-blue-950 font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                                    Start Free Trial
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                                <a href="#demo" className="px-8 py-4 rounded-full bg-blue-900/50 border border-blue-500/30 text-white font-semibold flex items-center justify-center hover:bg-blue-800/50 transition-colors backdrop-blur-sm">
+                                    View Live Demo
+                                </a>
                             </div>
                         </div>
                     </div>
