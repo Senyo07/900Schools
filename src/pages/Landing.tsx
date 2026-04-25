@@ -1,108 +1,111 @@
-import React from 'react';
-import { ArrowRight, BookOpen, Fingerprint, LayoutTemplate, Link as LinkIcon, ShieldCheck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Landing = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     return (
-        <div className="min-h-screen bg-blue-950 text-slate-50 overflow-hidden font-sans">
-            {/* Navbar */}
-            <nav className="fixed w-full z-50 top-0 transition-all duration-300 bg-blue-950/50 backdrop-blur-md border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-white flex items-center justify-center">
-                            <BookOpen className="text-white w-6 h-6" />
+        <div className="min-h-screen bg-gray-50 font-sans">
+            {/* Hero section */}
+            <div className="relative h-screen overflow-hidden">
+                {/* Video Background */}
+                <video
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_091828_e240eb17-6edc-4129-ad9d-98678e3fd238.mp4"
+                />
+
+                {/* Content wrapper */}
+                <div className="relative h-full flex flex-col z-10">
+                    {/* Navigation Bar */}
+                    <nav className="max-w-7xl w-full mx-auto px-8 py-6 flex justify-between items-center relative z-20">
+                        <div className="text-2xl font-semibold text-gray-900">
+                            SkyElite
                         </div>
-                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-                            900Schools
-                        </span>
-                    </div>
-                    <div className="flex items-center gap-6">
-                        <div className="hidden md:flex gap-6 text-sm font-medium text-blue-100">
-                            <a href="#features" className="hover:text-white transition-colors">Features</a>
-                            <a href="#solution" className="hover:text-white transition-colors">Solutions</a>
-                            <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+                        
+                        {/* Desktop Menu */}
+                        <div className="hidden md:flex items-center space-x-8">
+                            {['Start', 'Story', 'Rates', 'Benefits', 'FAQ'].map((item) => (
+                                <a 
+                                    key={item} 
+                                    href={`#${item.toLowerCase()}`} 
+                                    className="text-gray-900 hover:text-gray-700 transition-colors font-medium"
+                                >
+                                    {item}
+                                </a>
+                            ))}
                         </div>
-                        <Link to="/auth" className="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-all font-medium text-sm flex items-center gap-2">
-                            Sign In
-                        </Link>
-                        <Link to="/auth" className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-white hover:opacity-90 transition-opacity font-medium text-sm shadow-[0_0_20px_rgba(59,130,246,0.4)] text-blue-950">
-                            Get Started
-                        </Link>
-                    </div>
-                </div>
-            </nav>
 
-            {/* Hero Section */}
-            <section className="relative pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center justify-center min-h-[90vh]">
-                {/* Decorative Background Gradients */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/20 rounded-full blur-[120px] -z-10" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/10 rounded-full blur-[100px] -z-10" />
+                        {/* Mobile Menu Button */}
+                        <button 
+                            className="md:hidden text-gray-900"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle mobile menu"
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </nav>
 
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-blue-400/20 mb-8 backdrop-blur-sm">
-                    <span className="flex h-2 w-2 rounded-full relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-                    </span>
-                    <span className="text-sm font-medium text-blue-100">Intelligent School Operations Platform</span>
-                </div>
-
-                <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight mb-8">
-                    The future of <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-white">
-                        School Management
-                    </span>
-                </h1>
-
-                <p className="text-lg md:text-xl text-blue-100/80 text-center max-w-3xl mb-12">
-                    Centralize your operations, monitor behavior passively with QR-enabled tracking, and build stunning school websites instantly.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                    <Link to="/auth" className="px-8 py-4 rounded-full bg-white text-blue-950 font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                        Start Free Trial
-                        <ArrowRight className="w-5 h-5" />
-                    </Link>
-                    <a href="#demo" className="px-8 py-4 rounded-full bg-blue-900/50 border border-blue-500/30 font-semibold flex items-center justify-center hover:bg-blue-800/50 transition-colors backdrop-blur-sm">
-                        View Live Demo
-                    </a>
-                </div>
-            </section>
-
-            {/* Features Grid */}
-            <section id="features" className="py-24 px-6 relative z-10 w-full max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to run your school</h2>
-                    <p className="text-blue-100/60 max-w-2xl mx-auto">A unified ecosystem replacing disjointed tools with an all-in-one AI powered platform.</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {[
-                        {
-                            icon: <LayoutTemplate className="w-8 h-8 text-blue-400" />,
-                            title: "Website Builder",
-                            desc: "Deploy customized, beautiful school websites in literal seconds with dynamic modules."
-                        },
-                        {
-                            icon: <Fingerprint className="w-8 h-8 text-white" />,
-                            title: "Smart ID & QR",
-                            desc: "Auto-generate student ID cards with secure QR codes for attendance and tracking."
-                        },
-                        {
-                            icon: <ShieldCheck className="w-8 h-8 text-blue-300" />,
-                            title: "AI Behavior Monitoring",
-                            desc: "Teachers easily log reports while our AI polishes and alerts parents automatically."
-                        }
-                    ].map((feat, i) => (
-                        <div key={i} className="group p-8 rounded-3xl bg-blue-900/40 border border-blue-800/50 hover:border-blue-600/50 transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-                            <div className="w-14 h-14 rounded-2xl bg-blue-800/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                {feat.icon}
+                    {/* Mobile Dropdown */}
+                    {isMobileMenuOpen && (
+                        <div className="md:hidden absolute top-24 left-8 right-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-6 z-40">
+                            <div className="flex flex-col space-y-4">
+                                {['Start', 'Story', 'Rates', 'Benefits', 'FAQ'].map((item) => (
+                                    <a 
+                                        key={item} 
+                                        href={`#${item.toLowerCase()}`} 
+                                        className="text-gray-900 hover:text-gray-700 transition-colors text-lg font-medium"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {item}
+                                    </a>
+                                ))}
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-white">{feat.title}</h3>
-                            <p className="text-blue-100/70 leading-relaxed">{feat.desc}</p>
                         </div>
-                    ))}
+                    )}
+
+                    {/* Main content area */}
+                    <div className="flex-1 flex items-center justify-center relative z-10">
+                        <div className="flex flex-col items-center text-center -mt-80">
+                            {/* Label */}
+                            <div className="text-sm font-semibold text-gray-600 tracking-wider mb-4 uppercase">
+                                PRIVATE JETS
+                            </div>
+
+                            {/* Heading */}
+                            <div className="flex flex-col items-center mb-6">
+                                <h1 className="text-6xl md:text-7xl lg:text-8xl font-normal text-gray-500 leading-none tracking-tighter">
+                                    Premium.
+                                </h1>
+                                <h1 
+                                    className="text-6xl md:text-7xl lg:text-8xl font-normal text-[#202A36] leading-none tracking-tighter"
+                                    style={{ marginTop: '-12px' }}
+                                >
+                                    Accessible.
+                                </h1>
+                            </div>
+
+                            {/* Subtitle */}
+                            <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl px-4">
+                                Your dedication deserves recognition.
+                            </p>
+
+                            {/* Buttons */}
+                            <div className="flex flex-row items-center justify-center gap-4">
+                                <button className="px-4 py-2 rounded-full bg-gray-300 text-gray-800 font-medium hover:bg-gray-400 transition-colors">
+                                    Discover
+                                </button>
+                                <button className="px-4 py-2 rounded-full text-white bg-[#202A36] hover:bg-[#1a2229] font-medium transition-colors">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 };
