@@ -353,7 +353,7 @@ export const IdGeneratorModal: React.FC<IdGeneratorModalProps> = ({ isOpen, onCl
                                                 {selectedDesign === design.id && <CheckCircle2 className="w-4 h-4 text-indigo-600" />}
                                             </div>
                                             <div className="flex gap-2 text-[10px] uppercase font-bold tracking-wider">
-                                                <span className={`px-2 py-0.5 rounded ${design.type === 'Portrait' ? 'bg-blue-100 text-blue-700' : 'bg-blue-100 text-blue-700'}`}>
+                                                <span className={`px-2 py-0.5 rounded ${design.type === 'Portrait' ? 'bg-slate-100 text-slate-700' : 'bg-slate-100 text-slate-700'}`}>
                                                     {design.type}
                                                 </span>
                                                 <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-500">
@@ -414,7 +414,7 @@ export const IdGeneratorModal: React.FC<IdGeneratorModalProps> = ({ isOpen, onCl
                         {!isGenerated ? (
                             <>
                                 <div className="absolute top-6 left-6 flex items-center gap-2">
-                                    <span className="flex h-2 w-2 rounded-full bg-blue-500"></span>
+                                    <span className="flex h-2 w-2 rounded-full bg-slate-500"></span>
                                     <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Live Preview</span>
                                 </div>
 
@@ -425,7 +425,7 @@ export const IdGeneratorModal: React.FC<IdGeneratorModalProps> = ({ isOpen, onCl
                             </>
                         ) : (
                             <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center border border-slate-100">
-                                <div className="w-20 h-20 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                                <div className="w-20 h-20 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center mb-6 shadow-sm">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl font-black text-slate-800 mb-3">Card Ready!</h3>
@@ -463,12 +463,12 @@ export const IdGeneratorModal: React.FC<IdGeneratorModalProps> = ({ isOpen, onCl
                                     <button
                                         onClick={handlePrint}
                                         disabled={!!exportingType}
-                                        className={`flex flex-col items-center justify-center gap-3 w-40 h-40 bg-slate-50 ${exportingType && exportingType !== 'print' ? 'opacity-50' : 'hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200'} border-2 border-slate-100 rounded-2xl transition-all group`}
+                                        className={`flex flex-col items-center justify-center gap-3 w-40 h-40 bg-slate-50 ${exportingType && exportingType !== 'print' ? 'opacity-50' : 'hover:bg-slate-50 hover:text-slate-600 hover:border-slate-200'} border-2 border-slate-100 rounded-2xl transition-all group`}
                                     >
                                         {exportingType === 'print'
-                                            ? <Loader2 className="w-10 h-10 text-blue-500 animate-spin" />
-                                            : <Printer className="w-10 h-10 text-slate-400 group-hover:text-blue-600 transition-colors" />}
-                                        <span className="text-sm font-bold text-slate-600 group-hover:text-blue-600">
+                                            ? <Loader2 className="w-10 h-10 text-slate-500 animate-spin" />
+                                            : <Printer className="w-10 h-10 text-slate-400 group-hover:text-slate-600 transition-colors" />}
+                                        <span className="text-sm font-bold text-slate-600 group-hover:text-slate-600">
                                             {exportingType === 'print' ? 'Preparing...' : 'Print Card'}
                                         </span>
                                     </button>

@@ -132,14 +132,14 @@ const Settings = () => {
             {/* Contact Details */}
             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                 <div className="p-6 border-b border-slate-100 flex items-start gap-4">
-                    <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 bg-slate-50 text-slate-600 rounded-xl flex items-center justify-center shrink-0">
                         <Phone className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
                         <h2 className="text-xl font-bold text-slate-800">Super Admin Contact</h2>
                         <p className="text-sm text-slate-500">Provide a direct line so the 900Schools team can reach you regarding important updates or issues.</p>
                     </div>
-                    <div className="hidden sm:flex items-center text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                    <div className="hidden sm:flex items-center text-xs font-bold text-slate-600 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
                         <ShieldAlert className="w-3 h-3 mr-1" />
                         Private
                     </div>

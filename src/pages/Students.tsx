@@ -306,7 +306,7 @@ const Students = () => {
                                     </button>
                                     <button
                                         onClick={() => setEditStudent({ ...editStudent, status: 'Suspended' })}
-                                        className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-colors ${editStudent.status === 'Suspended' ? 'bg-blue-100 text-blue-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                                        className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-colors ${editStudent.status === 'Suspended' ? 'bg-slate-100 text-slate-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                                     >
                                         Suspended
                                     </button>
@@ -374,7 +374,7 @@ const Students = () => {
                                     </div>
                                 </div>
                                 <div className="ml-auto mt-auto self-end">
-                                    <span className={`px-4 py-1.5 rounded-full text-sm font-bold shadow-sm backdrop-blur-md ${viewingStudent.status === 'Active' ? 'bg-blue-400/20 text-blue-100 border border-blue-400/30' : 'bg-red-400/20 text-red-100 border border-red-400/30'}`}>
+                                    <span className={`px-4 py-1.5 rounded-full text-sm font-bold shadow-sm backdrop-blur-md ${viewingStudent.status === 'Active' ? 'bg-slate-400/20 text-slate-100 border border-slate-400/30' : 'bg-red-400/20 text-red-100 border border-red-400/30'}`}>
                                         {viewingStudent.status}
                                     </span>
                                 </div>
@@ -479,14 +479,14 @@ const Students = () => {
                             {activeTab === 'behavior' && (
                                 <div>
                                     <div className="grid grid-cols-2 gap-4 mb-6">
-                                        <div className="bg-white rounded-xl p-5 border border-blue-200 flex items-center gap-4 shadow-sm shadow-blue-100/50 relative overflow-hidden group">
-                                            <div className="absolute -right-4 -bottom-4 bg-blue-50 rounded-full w-24 h-24 group-hover:scale-110 transition-transform"></div>
-                                            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0 relative z-10">
+                                        <div className="bg-white rounded-xl p-5 border border-slate-200 flex items-center gap-4 shadow-sm shadow-slate-100/50 relative overflow-hidden group">
+                                            <div className="absolute -right-4 -bottom-4 bg-slate-50 rounded-full w-24 h-24 group-hover:scale-110 transition-transform"></div>
+                                            <div className="w-12 h-12 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center shrink-0 relative z-10">
                                                 <Award className="w-6 h-6" />
                                             </div>
                                             <div className="relative z-10">
-                                                <span className="block text-3xl font-black text-blue-700 leading-none mb-1">5</span>
-                                                <span className="text-xs font-bold text-blue-600/80 uppercase tracking-wider">Total Merits</span>
+                                                <span className="block text-3xl font-black text-slate-700 leading-none mb-1">5</span>
+                                                <span className="text-xs font-bold text-slate-600/80 uppercase tracking-wider">Total Merits</span>
                                             </div>
                                         </div>
                                         <div className="bg-white rounded-xl p-5 border border-rose-200 flex items-center gap-4 shadow-sm shadow-rose-100/50 relative overflow-hidden group">
@@ -508,7 +508,7 @@ const Students = () => {
                                         <div className="divide-y divide-slate-100">
                                             <div className="p-5 hover:bg-slate-50 transition-colors">
                                                 <div className="flex justify-between items-start mb-2">
-                                                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-1 rounded-md uppercase tracking-wider border border-blue-200/50">
+                                                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider border border-slate-200/50">
                                                         <Award className="w-3.5 h-3.5" /> Merit
                                                     </span>
                                                     <span className="text-xs font-medium text-slate-400">Oct 24, 2023</span>

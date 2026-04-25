@@ -37,7 +37,7 @@ const GallerySlider = ({ images }: { images: string[] }) => {
 };
 
 const WebsiteDesign = () => {
-    const [primaryColor, setPrimaryColor] = useState('#059669'); // blue-600
+    const [primaryColor, setPrimaryColor] = useState('#059669'); // slate-600
     const [themeName, setThemeName] = useState('Modern Minimal');
     const [logoUrl, setLogoUrl] = useState<string | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -292,12 +292,12 @@ const WebsiteDesign = () => {
 
                             <div className="mt-8 pt-8 border-t border-slate-300">
                                 <div className="mt-8 border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden text-center p-8">
-                                    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <div className="w-16 h-16 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <Globe className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-800 mb-2">Admissions Now Open</h3>
                                     <p className="text-sm text-slate-500 mb-6 font-medium">We are currently accepting new student applications.</p>
-                                    <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+                                    <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-slate-700 transition shadow-md hover:shadow-lg">
                                         Proceed to Online Application
                                     </a>
                                 </div>
@@ -379,12 +379,12 @@ const WebsiteDesign = () => {
 
                             <div className="mb-8">
                                 <div className="mt-8 border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden text-center p-8">
-                                    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <div className="w-16 h-16 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <Globe className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-800 mb-2">Admissions Now Open</h3>
                                     <p className="text-sm text-slate-500 mb-6 font-medium">We are currently accepting new student applications.</p>
-                                    <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+                                    <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-slate-700 transition shadow-md hover:shadow-lg">
                                         Proceed to Online Application
                                     </a>
                                 </div>
@@ -471,12 +471,12 @@ const WebsiteDesign = () => {
                             </div>
 
                             <div className="mt-8 border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden text-center p-8">
-                                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <div className="w-16 h-16 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <Globe className="w-8 h-8" />
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-800 mb-2">Admissions Now Open</h3>
                                 <p className="text-sm text-slate-500 mb-6 font-medium">We are currently accepting new student applications.</p>
-                                <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+                                <a href="/admissions" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-slate-700 transition shadow-md hover:shadow-lg">
                                     Proceed to Online Application
                                 </a>
                             </div>
@@ -571,7 +571,7 @@ const WebsiteDesign = () => {
                     placeholder={placeholder}
                     value={(modulesConfig as any)[field] as string}
                     onChange={(e) => setModulesConfig({ ...modulesConfig, [field]: e.target.value })}
-                    className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none"
+                    className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm resize-none"
                 ></textarea>
             )}
         </div>
@@ -589,7 +589,7 @@ const WebsiteDesign = () => {
                 <div className="xl:col-span-1 space-y-6">
                     <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
+                            <div className="p-2 rounded-lg bg-slate-50 text-slate-600">
                                 <Palette className="w-5 h-5" />
                             </div>
                             <h2 className="text-lg font-semibold text-slate-800">Website Customization</h2>
@@ -619,8 +619,8 @@ const WebsiteDesign = () => {
                                             key={theme}
                                             onClick={() => setThemeName(theme)}
                                             className={`text-left px-4 py-3 rounded-lg border text-sm transition-all ${themeName === theme
-                                                ? 'border-blue-500 bg-blue-50 text-blue-700 font-medium tracking-wide shadow-inner'
-                                                : 'border-slate-200 text-slate-600 hover:border-blue-200 hover:bg-slate-50'
+                                                ? 'border-slate-500 bg-slate-50 text-slate-700 font-medium tracking-wide shadow-inner'
+                                                : 'border-slate-200 text-slate-600 hover:border-slate-200 hover:bg-slate-50'
                                                 }`}
                                         >
                                             {theme}
@@ -641,14 +641,14 @@ const WebsiteDesign = () => {
                                     />
                                     <button
                                         onClick={() => fileInputRef.current?.click()}
-                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-dashed border-slate-300 hover:bg-slate-50 text-slate-500 hover:text-blue-600 hover:border-blue-300 transition-colors"
+                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-dashed border-slate-300 hover:bg-slate-50 text-slate-500 hover:text-slate-600 hover:border-slate-300 transition-colors"
                                     >
                                         <UploadCloud className="w-5 h-5" />
                                         <span className="text-xs font-medium">Update Logo</span>
                                     </button>
                                     <button
                                         onClick={() => setIsModalOpen(true)}
-                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-dashed border-slate-300 hover:bg-slate-50 text-slate-500 hover:text-blue-600 hover:border-blue-300 transition-colors"
+                                        className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-dashed border-slate-300 hover:bg-slate-50 text-slate-500 hover:text-slate-600 hover:border-slate-300 transition-colors"
                                     >
                                         <Layout className="w-5 h-5" />
                                         <span className="text-xs font-medium">Edit Modules</span>
@@ -656,7 +656,7 @@ const WebsiteDesign = () => {
                                 </div>
                             </div>
 
-                            <button className="w-full py-2.5 rounded-lg bg-blue-950 text-white font-medium text-sm hover:bg-blue-900 transition-colors shadow-sm">
+                            <button className="w-full py-2.5 rounded-lg bg-slate-950 text-white font-medium text-sm hover:bg-slate-900 transition-colors shadow-sm">
                                 Publish Changes
                             </button>
                         </div>
@@ -731,32 +731,32 @@ const WebsiteDesign = () => {
 
                         <div className="p-6 overflow-y-auto flex-1 space-y-8">
                             <div className="space-y-4">
-                                <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">School Details</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">School Details</h3>
                                 <div>
                                     <label className="block text-xs font-medium text-slate-700 mb-1">Name of School</label>
                                     <input
                                         type="text"
                                         value={modulesConfig.schoolName}
                                         onChange={(e) => setModulesConfig({ ...modulesConfig, schoolName: e.target.value })}
-                                        className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm font-medium"
+                                        className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm font-medium"
                                     />
                                 </div>
                             </div>
 
                             <div className="space-y-4 pt-6 border-t border-slate-100">
-                                <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">Hero Section</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Hero Section</h3>
                                 {renderTextAreaWithAI('Main Heading', 'heroTitle', 'Enter the main heading...', 2)}
                             </div>
 
                             <div className="space-y-4 pt-6 border-t border-slate-100">
-                                <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">About Section</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">About Section</h3>
                                 {renderTextAreaWithAI('Introduction Text', 'aboutText', 'Describe your institution...', 3)}
                             </div>
 
                             <div className="space-y-4 pt-6 border-t border-slate-100">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">Gallery Categories</h3>
-                                    <button onClick={addGalleryCategory} className="flex items-center gap-1 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">
+                                    <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Gallery Categories</h3>
+                                    <button onClick={addGalleryCategory} className="flex items-center gap-1 text-xs font-semibold text-slate-600 bg-slate-50 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition-colors">
                                         <Plus className="w-3 h-3" /> Add Category
                                     </button>
                                 </div>
@@ -776,7 +776,7 @@ const WebsiteDesign = () => {
                                                         type="text"
                                                         value={category.name}
                                                         onChange={(e) => updateGalleryCategory(category.id, 'name', e.target.value)}
-                                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm font-medium"
+                                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm font-medium"
                                                     />
                                                 </div>
                                                 <div>
@@ -830,7 +830,7 @@ const WebsiteDesign = () => {
                                                             rows={2}
                                                             value={category.description}
                                                             onChange={(e) => updateGalleryCategory(category.id, 'description', e.target.value)}
-                                                            className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm resize-none"
+                                                            className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm resize-none"
                                                         />
                                                     )}
                                                 </div>
@@ -844,20 +844,20 @@ const WebsiteDesign = () => {
                                                     <div className="flex gap-3 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-slate-300 items-center">
                                                         {category.thumbnail && (
                                                             <div className="relative shrink-0 border-r-2 border-slate-200 pr-3 mr-1 flex flex-col items-center">
-                                                                <span className="text-[9px] font-bold text-blue-600 uppercase mb-1">Thumbnail</span>
-                                                                <img src={category.thumbnail} alt="thumbnail" className="w-16 h-16 rounded-lg object-cover border-2 border-blue-500 ring-2 ring-blue-500/20" />
+                                                                <span className="text-[9px] font-bold text-slate-600 uppercase mb-1">Thumbnail</span>
+                                                                <img src={category.thumbnail} alt="thumbnail" className="w-16 h-16 rounded-lg object-cover border-2 border-slate-500 ring-2 ring-slate-500/20" />
                                                             </div>
                                                         )}
                                                         {category.images.map((img, i) => {
                                                             const isThumbnail = category.thumbnail === img;
                                                             return (
                                                                 <div key={i} className="relative group shrink-0 mt-4">
-                                                                    <img src={img} alt="uploaded" className={`w-14 h-14 rounded-lg object-cover border-2 ${isThumbnail ? 'border-blue-500 opacity-50' : 'border-slate-200'}`} />
+                                                                    <img src={img} alt="uploaded" className={`w-14 h-14 rounded-lg object-cover border-2 ${isThumbnail ? 'border-slate-500 opacity-50' : 'border-slate-200'}`} />
                                                                     {!isThumbnail && (
                                                                         <button
                                                                             onClick={(e) => { e.preventDefault(); setGalleryThumbnail(category.id, img); }}
                                                                             title="Set as Thumbnail"
-                                                                            className={`absolute -top-2 -right-2 p-1 rounded-full shadow-sm text-white bg-slate-400 hover:bg-blue-500 opacity-0 group-hover:opacity-100 transition-all z-10 hover:scale-110 cursor-pointer`}
+                                                                            className={`absolute -top-2 -right-2 p-1 rounded-full shadow-sm text-white bg-slate-400 hover:bg-slate-500 opacity-0 group-hover:opacity-100 transition-all z-10 hover:scale-110 cursor-pointer`}
                                                                         >
                                                                             <Star className="w-3 h-3 fill-current" />
                                                                         </button>
@@ -877,7 +877,7 @@ const WebsiteDesign = () => {
                             </div>
 
                             <div className="space-y-4 pt-6 border-t border-slate-100">
-                                <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">Upcoming Events & Notices</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Upcoming Events & Notices</h3>
                                 {renderTextAreaWithAI('Announcement Text', 'eventsText', 'Share upcoming events or important notices...', 3)}
 
                                 <div className="mt-6 bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 shadow-sm">
@@ -937,7 +937,7 @@ const WebsiteDesign = () => {
                             <div className="space-y-4 pt-6 border-t border-slate-100">
                                 <div className="flex items-center justify-between mb-4">
                                     <div>
-                                        <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700 mb-1">Teacher Profiles</h3>
+                                        <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700 mb-1">Teacher Profiles</h3>
                                         <p className="text-[10px] text-slate-500 font-medium">Add faculty directly or send them the prefill link below.</p>
                                     </div>
                                     <div className="flex gap-2">
@@ -951,7 +951,7 @@ const WebsiteDesign = () => {
                                         >
                                             <Globe className="w-3.5 h-3.5" /> Copy Prefill Link
                                         </button>
-                                        <button onClick={addTeacherProfile} className="flex items-center gap-1 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors shadow-sm">
+                                        <button onClick={addTeacherProfile} className="flex items-center gap-1 text-xs font-semibold text-slate-600 bg-slate-50 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition-colors shadow-sm">
                                             <Plus className="w-3 h-3" /> Add Teacher
                                         </button>
                                     </div>
@@ -985,7 +985,7 @@ const WebsiteDesign = () => {
                                                         />
                                                         <label
                                                             htmlFor={`teacher-upload-${teacher.id}`}
-                                                            className="px-3 py-1.5 flex items-center justify-center gap-1.5 w-full bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 cursor-pointer transition-colors shadow-sm"
+                                                            className="px-3 py-1.5 flex items-center justify-center gap-1.5 w-full bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-700 hover:border-slate-200 cursor-pointer transition-colors shadow-sm"
                                                         >
                                                             <UploadCloud className="w-3.5 h-3.5" /> Upload Photo
                                                         </label>
@@ -999,7 +999,7 @@ const WebsiteDesign = () => {
                                                                 type="text"
                                                                 value={teacher.name}
                                                                 onChange={(e) => updateTeacherProfile(teacher.id, 'name', e.target.value)}
-                                                                className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium transition-shadow"
+                                                                className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm font-medium transition-shadow"
                                                             />
                                                         </div>
                                                         <div>
@@ -1008,7 +1008,7 @@ const WebsiteDesign = () => {
                                                                 type="text"
                                                                 value={teacher.subject}
                                                                 onChange={(e) => updateTeacherProfile(teacher.id, 'subject', e.target.value)}
-                                                                className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm transition-shadow"
+                                                                className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm transition-shadow"
                                                             />
                                                         </div>
                                                     </div>
@@ -1018,7 +1018,7 @@ const WebsiteDesign = () => {
                                                             rows={2}
                                                             value={teacher.description}
                                                             onChange={(e) => updateTeacherProfile(teacher.id, 'description', e.target.value)}
-                                                            className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none transition-shadow"
+                                                            className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm resize-none transition-shadow"
                                                         />
                                                     </div>
                                                 </div>
@@ -1032,19 +1032,19 @@ const WebsiteDesign = () => {
                             </div>
 
                             <div className="space-y-4 pt-6 border-t border-slate-100">
-                                <h3 className="text-sm font-bold uppercase tracking-wider text-blue-700">Contact Details</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Contact Details</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     <div>
                                         <label className="block text-xs font-medium text-slate-700 mb-1">Email</label>
-                                        <input type="email" value={modulesConfig.contactEmail} onChange={(e) => setModulesConfig({ ...modulesConfig, contactEmail: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm" />
+                                        <input type="email" value={modulesConfig.contactEmail} onChange={(e) => setModulesConfig({ ...modulesConfig, contactEmail: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm" />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-medium text-slate-700 mb-1">Phone Number</label>
-                                        <input type="text" value={modulesConfig.contactPhone} onChange={(e) => setModulesConfig({ ...modulesConfig, contactPhone: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm" />
+                                        <input type="text" value={modulesConfig.contactPhone} onChange={(e) => setModulesConfig({ ...modulesConfig, contactPhone: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm" />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-medium text-slate-700 mb-1">WhatsApp</label>
-                                        <input type="text" value={modulesConfig.contactWhatsApp} onChange={(e) => setModulesConfig({ ...modulesConfig, contactWhatsApp: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm" />
+                                        <input type="text" value={modulesConfig.contactWhatsApp} onChange={(e) => setModulesConfig({ ...modulesConfig, contactWhatsApp: e.target.value })} className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-500 text-sm" />
                                     </div>
                                 </div>
                             </div>
@@ -1059,7 +1059,7 @@ const WebsiteDesign = () => {
                             </button>
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="px-6 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm"
+                                className="px-6 py-2 rounded-lg font-medium bg-slate-600 text-white hover:bg-slate-700 transition-colors shadow-sm"
                             >
                                 Save Changes
                             </button>
