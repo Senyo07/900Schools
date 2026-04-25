@@ -7,6 +7,7 @@ def replace_in_file(filepath):
     
     # Change emerald to blue
     new_content = content.replace('emerald', 'blue')
+    new_content = new_content.replace('16,185,129', '59,130,246')
     
     # Change amber to white/blue for the blue and white theme
     new_content = new_content.replace('amber-500', 'white')
