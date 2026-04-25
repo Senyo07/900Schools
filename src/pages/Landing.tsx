@@ -90,7 +90,7 @@ const Landing = () => {
 
                     {/* Main content area */}
                     <div className="flex-1 flex items-center justify-center relative z-10">
-                        <div className="flex flex-col items-center text-center -mt-80">
+                        <div className="flex flex-col items-center text-center -mt-10 md:-mt-20">
                             {/* Label */}
                             <div className="text-sm font-semibold text-gray-600 tracking-wider mb-4 uppercase">
                                 INTELLIGENT SCHOOL OPERATIONS PLATFORM
