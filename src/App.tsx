@@ -9,6 +9,7 @@ import TeacherPortal from './pages/TeacherPortal';
 import WebsiteDesign from './pages/WebsiteDesign';
 import AdmissionsForm from './pages/AdmissionsForm';
 import Admissions from './pages/Admissions';
+import Demo from './pages/Demo';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/website-design" element={<WebsiteDesign />} />
         <Route path="/admissions-form" element={<AdmissionsForm />} />
         <Route path="/admissions" element={<Admissions />} />
+        <Route path="/demo" element={<Demo />} />
       </Routes>
     </Router>
   );

@@ -120,9 +120,9 @@ const Landing = () => {
                                     Start Free Trial
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
-                                <a href="#demo" className="px-8 py-4 rounded-full bg-gray-900/50 border border-gray-500/30 text-white font-semibold flex items-center justify-center hover:bg-gray-800/50 transition-colors backdrop-blur-sm">
+                                <Link to="/demo" className="px-8 py-4 rounded-full bg-gray-900/50 border border-gray-500/30 text-white font-semibold flex items-center justify-center hover:bg-gray-800/50 transition-colors backdrop-blur-sm">
                                     View Live Demo
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
